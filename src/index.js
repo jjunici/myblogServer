@@ -12,12 +12,12 @@ const {
     MONGO_URI:mongoURI,
     COOKIE_SIGN_KEY:signKey
 }=process.env;
-mongoose.Promise=global.Promise;//Node의 Promise를 사용하도록 설정 
-mongoose.connect(mongoURI,{useNewUrlParser:true}).then(()=>{
+//mongoose.Promise=global.Promise;//Node의 Promise를 사용하도록 설정 
+/*mongoose.connect(mongoURI,{useNewUrlParser:true}).then(()=>{
     console.log('connected to mongodb');
 }).catch((e)=>{
     console.error(e);
-})
+})*/
 //라우터 설정 
 router.use('/api',api.routes());//api 라우트 적용 
 //라우터 적용 전에 bodyParser 적용 
