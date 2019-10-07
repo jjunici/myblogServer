@@ -17,6 +17,7 @@
     "nodemon": "^1.18.10"
   },
   "scripts": {
-    "start":"node index.js"
+    "start": "cross-env NODE_PATH=src node src",
+    "start:dev": "cross-env NODE_PATH=src nodemon --watch src/ src/index.js"
   }
 }
